@@ -425,6 +425,8 @@ def main():
             prefetch_factor=4,
             predownload=2000,
             pack_batch_texts=2048,
+            world_size=world_size,
+            global_rank=rank,
         )
     else:
         raise ValueError(f"Unsupported data source: {args.data_name}")
